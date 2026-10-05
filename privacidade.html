@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacidade do Pokes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Young+Serif&display=swap">
+<style>
+  :root {
+    --bg: #f6f7f4; --surface: #ffffff; --ink: #14181c; --muted: #5c666b;
+    --line: #dde2dc; --accent: #4d6b00; --chip: #e9f5c9; color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0b0d10; --surface: #151a1f; --ink: #f2f5f3; --muted: #8e979b;
+      --line: #2b333a; --accent: #ccff33; --chip: #1d242a; color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 400 16px/1.65 "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+    padding: 48px 16px 72px;
+  }
+  main { max-width: 680px; margin-inline: auto; display: flex; flex-direction: column; gap: 40px; }
+  header { display: flex; flex-direction: column; gap: 12px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; letter-spacing: 0.02em; color: var(--ink); text-decoration: none; }
+  .mark { width: 26px; height: 36px; border-radius: 5px; background: #ccff33; color: #0b0d10; display: grid; place-items: center; font: 400 20px/1 "Young Serif", Georgia, serif; }
+  h1, h2 { font-family: "Young Serif", Georgia, "Times New Roman", serif; font-weight: 400; margin: 0; }
+  h1 { font-size: clamp(30px, 6vw, 40px); line-height: 1.15; }
+  h2 { font-size: 22px; line-height: 1.3; }
+  h3 { font-size: 16px; font-weight: 600; margin: 0; }
+  p, ul { margin: 0; }
+  .meta { color: var(--muted); font-size: 14px; }
+  section { display: flex; flex-direction: column; gap: 14px; }
+  ul { padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
+  li::marker { color: var(--muted); }
+  .items { display: flex; flex-direction: column; border-top: 1px solid var(--line); }
+  .item { display: flex; flex-direction: column; gap: 4px; padding-block: 14px; border-bottom: 1px solid var(--line); }
+  .item p { color: var(--muted); }
+  .note { background: var(--chip); border-radius: 14px; padding: 16px 18px; display: flex; flex-direction: column; gap: 6px; }
+  .email { font-weight: 600; color: var(--accent); word-break: break-all; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); padding-top: 20px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <a class="brand" href="./"><span class="mark" aria-hidden="true">P</span>Pokes</a>
+    <h1>Política de Privacidade</h1>
+    <p class="meta">Última atualização: 5 de outubro de 2026</p>
+    <p>O Pokes é um app para catalogar sua coleção de cartas Pokémon TCG e acompanhar os preços delas no Brasil. Esta página explica quais dados o app guarda, por que guarda, com quem compartilha e como você apaga tudo. Ela segue a Lei Geral de Proteção de Dados (Lei 13.709/2018, LGPD).</p>
+  </header>
+
+  <section>
+    <h2>Quem cuida dos seus dados</h2>
+    <p>O Pokes é mantido por um desenvolvedor independente, que é o controlador dos dados descritos aqui. Para qualquer pedido ou dúvida sobre privacidade, escreva para:</p>
+    <p class="email">samueloh99@gmail.com</p>
+  </section>
+
+  <section>
+    <h2>O que o app guarda</h2>
+    <div class="items">
+      <div class="item">
+        <h3>Conta</h3>
+        <p>Se você criar uma conta com email: email, nome (opcional) e senha. A senha é guardada só como hash bcrypt; ninguém consegue lê-la. Sem conta, o app cria uma conta de visitante presa ao aparelho, identificada por um código aleatório guardado no próprio celular (no servidor fica só o hash desse código).</p>
+      </div>
+      <div class="item">
+        <h3>Entrar com a Apple ou com o Google</h3>
+        <p>Se você escolher entrar com a Apple ou com o Google, recebemos desses serviços apenas seu nome, seu email e um identificador da sua conta neles. Usamos esses dados só para criar e reconhecer sua conta no Pokes. Não acessamos seus contatos, emails, arquivos ou qualquer outro dado da sua conta Apple ou Google, e não compartilhamos esses dados com ninguém.</p>
+      </div>
+      <div class="item">
+        <h3>Coleção</h3>
+        <p>As cartas que você adiciona, com variante, condição, idioma, quantidade e, se você preencher, preço e data de compra e observações.</p>
+      </div>
+      <div class="item">
+        <h3>Fotos dos scans</h3>
+        <p>Quando você fotografa uma carta ou escolhe uma foto da galeria para identificá-la, a foto é enviada ao nosso servidor, que compara a imagem com o catálogo de cartas. A foto fica guardada por até 90 dias e depois é apagada. O resultado (a carta identificada e a carta que você confirmou) fica no histórico da sua conta. O app só acessa a câmera e as fotos quando você pede um scan, e só a foto que você escolher.</p>
+      </div>
+      <div class="item">
+        <h3>Dados do aparelho</h3>
+        <p>Sistema e versão, fabricante e modelo, versão do app, tamanho de tela, escala de fonte, idioma e um identificador de instalação gerado pelo próprio app. Servem para diagnosticar erros. Não coletamos IMEI, número de série, ID de publicidade nem localização.</p>
+      </div>
+      <div class="item">
+        <h3>Dados técnicos</h3>
+        <p>Endereço IP e horário das requisições, usados para limitar abusos e registrados temporariamente pela hospedagem do servidor.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Para que usamos</h2>
+    <ul>
+      <li>Manter sua coleção e seu histórico de scans, inclusive se você trocar de celular (com conta).</li>
+      <li>Identificar a carta da foto.</li>
+      <li>Controlar o limite de scans gratuitos.</li>
+      <li>Corrigir erros e proteger o serviço contra abuso.</li>
+    </ul>
+    <p>A base legal é a execução do serviço que você pediu ao usar o app (LGPD, art. 7º, V) e o legítimo interesse em manter o serviço seguro e funcionando (art. 7º, IX).</p>
+    <div class="note">
+      <h3>O que não fazemos</h3>
+      <p>Não vendemos dados, não mostramos anúncios, não usamos ferramentas de rastreamento ou analytics de terceiros e não montamos perfil de publicidade.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Com quem compartilhamos</h2>
+    <p>Só com os serviços necessários para o app funcionar:</p>
+    <div class="items">
+      <div class="item">
+        <h3>Railway (Estados Unidos)</h3>
+        <p>Hospeda o servidor, o banco de dados e as fotos.</p>
+      </div>
+      <div class="item">
+        <h3>Expo (Estados Unidos)</h3>
+        <p>Entrega as atualizações do app. O app consulta os servidores da Expo ao abrir, informando a versão instalada.</p>
+      </div>
+      <div class="item">
+        <h3>Apple e Google</h3>
+        <p>Distribuem o app pela App Store, TestFlight e Google Play e, se você escolher, fazem o login com a sua conta deles, conforme as políticas de privacidade de cada um.</p>
+      </div>
+    </div>
+    <p>Como esses serviços ficam fora do Brasil, há transferência internacional de dados, feita para executar o serviço que você pediu (LGPD, art. 33). Os preços das cartas são consultados em lojas como Liga Pokémon e MyP Cards pelo nosso servidor; nenhum dado seu é enviado a elas. Ao tocar num link de anúncio, você sai do app e passa a valer a política da loja.</p>
+  </section>
+
+  <section>
+    <h2>Por quanto tempo guardamos</h2>
+    <ul>
+      <li><strong>Fotos dos scans:</strong> até 90 dias.</li>
+      <li><strong>Conta:</strong> até você excluí-la.</li>
+      <li><strong>Conta de visitante:</strong> apagada depois de 90 dias sem uso se não tiver nenhuma carta; com cartas, fica até você excluí-la ou pedir a exclusão.</li>
+      <li><strong>Sessão:</strong> o acesso expira em 30 dias sem uso.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Como excluir sua conta</h2>
+    <p>No app, abra <strong>Perfil</strong> e toque em <strong>Excluir conta</strong>. A conta, a coleção, o histórico de scans, as fotos e os dados do aparelho são apagados na hora e não dá para desfazer. Se você entrou com a Apple, a Apple também é avisada. Se não conseguir usar o app, peça a exclusão pelo email acima, a partir do endereço cadastrado.</p>
+  </section>
+
+  <section>
+    <h2>Seus direitos</h2>
+    <p>Pela LGPD (art. 18), você pode pedir a qualquer momento: confirmação de que tratamos seus dados, acesso a eles, correção, exclusão, portabilidade, informação sobre com quem compartilhamos e revisão desta política. Responda pelo email acima; respondemos em até 15 dias. Você também pode reclamar à Autoridade Nacional de Proteção de Dados (ANPD).</p>
+  </section>
+
+  <section>
+    <h2>Segurança</h2>
+    <p>Toda comunicação entre o app e o servidor usa HTTPS. Senhas e códigos de aparelho são guardados só como hash, e o acesso ao banco é restrito ao servidor.</p>
+  </section>
+
+  <section>
+    <h2>Crianças</h2>
+    <p>O Pokes não é destinado a menores de 13 anos sem o acompanhamento de um responsável. Se você é responsável e acredita que uma criança criou uma conta, escreva para o email acima e apagamos os dados.</p>
+  </section>
+
+  <section>
+    <h2>Mudanças nesta política</h2>
+    <p>Se a política mudar, esta página é atualizada e a data no topo muda junto.</p>
+  </section>
+
+  <footer>Pokes · Contato: samueloh99@gmail.com · <a href="./">Página inicial</a></footer>
+</main>
+</body>
+</html>
