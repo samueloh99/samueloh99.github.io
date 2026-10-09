@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacidade do Jarvis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Young+Serif&display=swap">
+<style>
+  :root {
+    --bg: #f6f7f4; --surface: #ffffff; --ink: #14181c; --muted: #5c666b;
+    --line: #dde2dc; --accent: #4d6b00; --chip: #e9f5c9; color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0b0d10; --surface: #151a1f; --ink: #f2f5f3; --muted: #8e979b;
+      --line: #2b333a; --accent: #ccff33; --chip: #1d242a; color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 400 16px/1.65 "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+    padding: 48px 16px 72px;
+  }
+  main { max-width: 680px; margin-inline: auto; display: flex; flex-direction: column; gap: 40px; }
+  header { display: flex; flex-direction: column; gap: 12px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; letter-spacing: 0.02em; color: var(--ink); text-decoration: none; }
+  .mark { width: 26px; height: 36px; border-radius: 5px; background: #ccff33; color: #0b0d10; display: grid; place-items: center; font: 400 20px/1 "Young Serif", Georgia, serif; }
+  h1, h2 { font-family: "Young Serif", Georgia, "Times New Roman", serif; font-weight: 400; margin: 0; }
+  h1 { font-size: clamp(30px, 6vw, 40px); line-height: 1.15; }
+  h2 { font-size: 22px; line-height: 1.3; }
+  h3 { font-size: 16px; font-weight: 600; margin: 0; }
+  p, ul { margin: 0; }
+  .meta { color: var(--muted); font-size: 14px; }
+  section { display: flex; flex-direction: column; gap: 14px; }
+  ul { padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
+  li::marker { color: var(--muted); }
+  .items { display: flex; flex-direction: column; border-top: 1px solid var(--line); }
+  .item { display: flex; flex-direction: column; gap: 4px; padding-block: 14px; border-bottom: 1px solid var(--line); }
+  .item p { color: var(--muted); }
+  .note { background: var(--chip); border-radius: 14px; padding: 16px 18px; display: flex; flex-direction: column; gap: 6px; }
+  .email { font-weight: 600; color: var(--accent); word-break: break-all; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); padding-top: 20px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <a class="brand" href="./"><span class="mark" aria-hidden="true">J</span>Jarvis</a>
+    <h1>Política de Privacidade</h1>
+    <p class="meta">Última atualização: 9 de outubro de 2026</p>
+    <p>O Jarvis é um assistente pessoal por voz que roda no computador do próprio dono. É um projeto de uso individual: a única conta que ele acessa é a do dono, que também é quem o desenvolve. Esta página explica quais dados ele usa, onde ficam e como cortar o acesso. Ela segue a Lei Geral de Proteção de Dados (Lei 13.709/2018, LGPD).</p>
+  </header>
+
+  <section>
+    <h2>Quem cuida dos dados</h2>
+    <p>O Jarvis é mantido por um desenvolvedor independente, que é o controlador dos dados descritos aqui. Para qualquer dúvida sobre privacidade, escreva para:</p>
+    <p class="email">samueloh99@gmail.com</p>
+  </section>
+
+  <section>
+    <h2>Dados do Google que ele usa</h2>
+    <p>Com a autorização do dono, dada pelo login do Google, o Jarvis acessa:</p>
+    <div class="items">
+      <div class="item">
+        <h3>Google Agenda</h3>
+        <p>Lê os compromissos e, quando o dono pede, cria, muda ou cancela compromissos. Cancelar sempre espera a confirmação dele por voz.</p>
+      </div>
+      <div class="item">
+        <h3>Gmail</h3>
+        <p>Busca e lê emails, escreve rascunhos, arquiva e marca emails quando o dono pede. Mandar um email ou mandá-lo para a lixeira sempre espera a confirmação dele por voz.</p>
+      </div>
+      <div class="item">
+        <h3>Google Drive, Planilhas e Documentos</h3>
+        <p>Procura, lê, cria e edita arquivos quando o dono pede. Mandar um arquivo para a lixeira ou compartilhá-lo sempre espera a confirmação dele por voz.</p>
+      </div>
+    </div>
+    <p>O Jarvis só acessa esses dados para atender a um pedido do dono, na hora em que ele pede. O uso e a transferência de informações recebidas das APIs do Google seguem a <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de Dados do Usuário dos Serviços de API do Google</a>, incluindo os requisitos de Uso Limitado.</p>
+  </section>
+
+  <section>
+    <h2>Onde os dados ficam</h2>
+    <ul>
+      <li>A voz é transcrita e a resposta é falada no próprio computador; o áudio não sai dele.</li>
+      <li>A memória, as tarefas e o histórico de conversas ficam só em arquivos no computador do dono.</li>
+      <li>A autorização do Google fica no computador, trancada pela proteção de dados do Windows: só o usuário do dono, naquele computador, consegue abri-la.</li>
+    </ul>
+    <div class="note">
+      <h3>O que não fazemos</h3>
+      <p>Não vendemos dados, não mostramos anúncios, não usamos analytics nem rastreamento e não guardamos dados do Google em servidores próprios.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Com quem compartilhamos</h2>
+    <div class="items">
+      <div class="item">
+        <h3>Anthropic (Estados Unidos)</h3>
+        <p>Para entender o pedido e montar a resposta, o texto da pergunta e o trecho dos dados do Google necessário para respondê-la (por exemplo, o assunto de um email ou um compromisso) são enviados à API do Claude, da Anthropic, conforme a política de privacidade dela.</p>
+      </div>
+      <div class="item">
+        <h3>Google</h3>
+        <p>Os pedidos à Agenda, ao Gmail e ao Drive vão direto para o Google, conforme a política de privacidade do Google.</p>
+      </div>
+    </div>
+    <p>Nenhum dado é enviado a qualquer outra empresa.</p>
+  </section>
+
+  <section>
+    <h2>Como cortar o acesso</h2>
+    <p>O acesso pode ser revogado a qualquer momento em <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>, escolhendo Jarvis e removendo o acesso. Apagar a pasta de dados do Jarvis no computador apaga a memória, as tarefas, as conversas e a autorização guardada.</p>
+  </section>
+
+  <section>
+    <h2>Seus direitos</h2>
+    <p>Pela LGPD (art. 18), você pode pedir a qualquer momento confirmação, acesso, correção ou exclusão de dados. Escreva para o email acima; respondemos em até 15 dias.</p>
+  </section>
+
+  <section>
+    <h2>Mudanças nesta política</h2>
+    <p>Se a política mudar, esta página é atualizada e a data no topo muda junto.</p>
+  </section>
+
+  <footer>Jarvis · Contato: samueloh99@gmail.com · <a href="./">Página inicial</a></footer>
+</main>
+</body>
+</html>

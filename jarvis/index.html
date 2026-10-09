@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jarvis</title>
+<meta name="description" content="Jarvis: assistente pessoal por voz que roda no computador do dono.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Young+Serif&display=swap">
+<style>
+  :root { --bg: #f6f7f4; --ink: #14181c; --muted: #5c666b; --line: #dde2dc; --accent: #4d6b00; color-scheme: light; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0b0d10; --ink: #f2f5f3; --muted: #8e979b; --line: #2b333a; --accent: #ccff33; color-scheme: dark; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; background: var(--bg); color: var(--ink);
+    font: 400 17px/1.6 "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+    display: grid; place-items: center; padding: 48px 16px;
+  }
+  main { max-width: 560px; display: flex; flex-direction: column; gap: 24px; }
+  .mark { width: 52px; height: 72px; border-radius: 9px; background: #ccff33; color: #0b0d10; display: grid; place-items: center; font: 400 40px/1 "Young Serif", Georgia, serif; }
+  h1 { font: 400 clamp(36px, 8vw, 52px)/1.1 "Young Serif", Georgia, serif; margin: 0; }
+  p { margin: 0; color: var(--muted); }
+  ul { margin: 0; padding-left: 20px; color: var(--muted); display: flex; flex-direction: column; gap: 4px; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  footer { border-top: 1px solid var(--line); padding-top: 16px; font-size: 15px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 8px 20px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="mark" aria-hidden="true">J</div>
+  <h1>Jarvis</h1>
+  <p>Assistente pessoal por voz que roda no computador do próprio dono. É um projeto pessoal, de uso individual: não está disponível para outras pessoas.</p>
+  <ul>
+    <li>Responde por voz a perguntas e pedidos do dia a dia.</li>
+    <li>Consulta e organiza a agenda, os emails e os arquivos do Google do dono, quando ele pede.</li>
+    <li>Guarda memória, tarefas e conversas só no computador dele.</li>
+  </ul>
+  <footer>
+    <a href="privacidade.html">Política de Privacidade</a>
+    <span>Contato: <a href="mailto:samueloh99@gmail.com">samueloh99@gmail.com</a></span>
+  </footer>
+</main>
+</body>
+</html>
